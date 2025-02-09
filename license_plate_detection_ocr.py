@@ -3,7 +3,7 @@ import os
 from ultralytics import YOLO
 import pytesseract
 
-# بارگذاری مدل YOLO
+# YOLO بارگذاری مدل 
 model = YOLO('license_plate_detector.pt')
 
 # بارگذاری تصویر
@@ -13,7 +13,7 @@ image = cv2.imread(image_path)
 # استخراج نام فایل اصلی بدون پسوند
 base_name, ext = os.path.splitext(os.path.basename(image_path))
 
-# اجرای YOLO روی تصویر
+# روی تصویر YOLO اجرای
 results = model(image)
 plate_class_id = 0
 
